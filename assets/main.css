@@ -1,0 +1,297 @@
+/* 
+---------------------------- 
+*/
+html,body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary: #2fbf71;
+    --primary-light: #2fbf7122;
+    --secondary: #10101a;
+    --black: #000000;
+    --white: #fffefe;
+    --light: #f1f2f3;
+}
+
+/* ----- Colors ----- */
+.primary {
+    color: var(--primary)!important;
+}
+.primary-light {
+    color: var(--primary-light)!important;
+}
+.secondary {
+    color: var(--secondary)!important;
+}
+.white {
+    color: var(--white)!important;
+}
+.black {
+    color: var(--black)!important;
+}
+.light {
+    color: var(--light)!important;
+}
+
+
+.primary-bg {
+    background: var(--primary)!important;
+}
+.primary-light-bg {
+    background: var(--primary-light)!important;
+}
+.secondary-bg {
+    background: var(--secondary)!important;
+}
+.white-bg {
+    background: var(--white)!important;
+}
+.light-bg {
+    background: var(--light)!important;
+}
+.black-bg {
+    background: var(--black)!important;
+}
+
+
+.primary-outline-border {
+    color: var(--primary)!important;
+    border-color: var(--primary)!important;
+    position: relative;
+    z-index: 2;
+}
+
+.primary-outline-border:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    bottom: -5px;
+    right: -5px;
+    opacity: .125;
+    border-radius: 0.25rem;
+    background: transparent;
+    border: 1px solid #fff;
+}
+
+
+/* ----- End of Colors ----- */
+
+
+
+/* ----- Mods ----- */
+#mainNav { flex-grow: 0!important }
+/* ----- End of Mods ----- */
+
+/* ----- Fonts ----- */
+
+/* --- Poppins --- */
+@font-face {
+    src: url(fonts/Poppins-Bold.ttf);
+    font-family: pb;
+}
+@font-face {
+    src: url(fonts/Poppins-Light.ttf);
+    font-family: pl;
+}
+@font-face {
+    src: url(fonts/Poppins-Regular.ttf);
+    font-family: pr;
+}
+@font-face {
+    src: url(fonts/Poppins-Thin.ttf);
+    font-family: pt;
+}
+
+.pb {font-family: pb;}
+.pl {font-family: pl;}
+.pr {font-family: pr;}
+.pt {font-family: pt;}
+
+/* --- Rubiks --- */
+@font-face {
+    src: url(fonts/Rubik-Bold.ttf);
+    font-family: rb;
+}
+@font-face {
+    src: url(fonts/Rubik-Light.ttf);
+    font-family: rl;
+}
+@font-face {
+    src: url(fonts/Rubik-Regular.ttf);
+    font-family: rr;
+}
+
+.rb { font-family: rb; }
+.rl { font-family: rl; }
+.rr { font-family: rr; }
+
+/* ----- End of Fonts ----- */
+
+
+/* Mods */
+.nav-item > a {
+    color: white!important;
+}
+.nav-item > a:hover {
+    color: var(--primary)!important;
+    font-family: pb;
+}
+.nav-item > .active {
+    color: var(--primary)!important;
+    font-family: pb;
+}
+.mainPic {
+    border-radius: 50%;
+    position: relative;
+}
+.mainPic::before {
+    content: "";
+    background: var(--primary);
+    position: absolute;
+    top: -15px;
+    left: -25px;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.mainPic::after {
+    content: "";
+    background: var(--primary-light);
+    position: absolute;
+    bottom: -15px;
+    right: -25px;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.mainPic:hover::before {
+    top: -5px;
+    left: -15px;
+    transition: .7s;
+    transition-timing-function: ease;
+}
+
+.mainPic:hover::after {
+    bottom: -5px;
+    right: -15px;
+    transition: .4s;
+    transition-timing-function: ease-in-out;
+}
+
+.code-text {
+    letter-spacing: 4px;
+    display: block;
+    color: #8d8d8d;
+}
+
+#socialIcons {
+    box-shadow: 2px 2px 1px #ffffff;
+}
+#socialIcons:hover {
+    box-shadow: 2px 2px 3px #ffffff;
+}
+
+
+.title h3 {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    font-weight: 300;
+    font-size: 30px;
+    display: inline-block;
+    vertical-align: top;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+.title h3:before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    width: 60px;
+    background: #2fbf71;
+    height: 1px;
+}
+
+.title h3:after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -7px;
+    left: 56px;
+    right: 0;
+    z-index: -1;
+    background: #2fbf71;
+}
+
+#ddd {
+    min-height: 100%;
+}
+
+.education-box span {
+    background: #2fbf71;
+    color: #fff;
+    font-size: 11px;
+    padding: 1px 8px;
+    display: inline-block;
+    vertical-align: top;
+    letter-spacing: 1px;
+    margin-left: -21px;
+    position: relative;
+    margin-bottom: 9px;
+}
+
+.education-box span:after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    border-top: 5px solid #165934;
+    border-left: 5px solid transparent;
+}
+
+
+/* Experience */
+.experience {
+    position: relative;
+    padding: 0 20px 0 60px!important;
+    margin: 0 0 0px!important;
+}
+.experience .icon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    line-height: 40px;
+    text-align: center;
+    z-index: 1;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--primary);
+}
+
+.experience:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20px;
+    bottom: 0;
+    border-left: 1px solid #333;
+}
+
+
